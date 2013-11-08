@@ -52,3 +52,47 @@ print(t[2][2] .. ", " .. t[2][3]); --there, everyone
 print(t.foo.vintage); -- asociative and return: 75
 
 t = nil;  -- garbage
+
+---------------------Functions
+function doIt()
+	print("Hello World");
+end
+
+function doIt(what)
+	print(what);
+end
+doIt("Hello Men");
+
+function sayHello(name,hello)
+	print(name .. hello);
+end
+
+sayHello("Ivan"," Hello brother");
+
+local foo = sayHello;
+foo("Yenny", " Hello");
+
+local two = function(what,where)
+	print(what .. ", "..where)
+end
+
+two("Again", "and again");
+
+
+local function lotsOfArgs(...)
+	print(arg[1] .. " " .. arg[2]);
+end
+lotsOfArgs("Hmm..","I see");
+
+local t = {};
+t.doIt = function(what,where)
+	print(what .. ", " .. where);
+end
+t.doIt("Corona","for apps");
+
+
+t.addIt = function(uno,dos)
+	return uno + dos; 
+end
+local tres = t.addIt(1,2);
+print(tres);

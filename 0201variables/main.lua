@@ -20,4 +20,4 @@ print(three);
 local fooNess = fooBar .. three;
 print(fooNess);
 
-a
+foo = nil;
